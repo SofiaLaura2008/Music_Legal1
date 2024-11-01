@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Adicionar Informações do Artista</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: rgb(226, 225, 225);
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+                height: auto;
+                padding: 20px;
+                flex-wrap: wrap;
+            }
+
+            .musicas, .artistas {
+                width: 45%;
+                padding: 20px;
+                text-align: left;
+            }
+
+            .divider {
+                border-left: 1px solid black;
+                height: 100%;
+            }
+
+            h1 {
+                width: 100%;
+                text-align: center;
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            li {
+                margin: 5px 0;
+            }
+
+            form {
+                margin-top: 20px;
+            }
+
+            button, input[type="submit"] {
+                padding: 10px;
+                margin-top: 10px;
+                background-color: #418f43;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Adicionar Informações para {{ artista.nome }}</h1>
+        <form action="" method="post">
+            <label>Nacionalidade:</label>
+            <br>
+            <input type="text" name="nacionalidade" required>
+            <br><br>
+
+            <label>Idade:</label>
+            <br>
+            <input type="number" name="idade" required>
+            <br><br>
+            
+            <button type="submit">Salvar Informações</button>
+        </form>
+    </body>
+</html>
